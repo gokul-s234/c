@@ -1,0 +1,14 @@
+// syntax
+
+#include<stdio.h>
+int main()
+
+int day =4;
+switch(day);
+case 1;
+printf("monday");
+break;
+
+
+
+default;

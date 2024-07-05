@@ -1,0 +1,49 @@
+//for(initilation, condition,increment or decrement)
+
+// loops-intialize,conditio,in/de
+
+// intialization
+// while(cond){
+//     stmt;
+//     in/de;
+// }
+
+
+// #include<stdio.h>
+// int main(){
+//     int i=10;
+
+//     while(i>=5){
+//         printf("%d\n",i);
+//         i--;
+//     }
+// }
+
+
+// do while
+
+// intialization
+// do{
+
+// stmt;
+// i++;
+// }while(condition);
+
+// #include<stdio.h>
+// int main(){
+//     int a=10;
+//     do{
+//         printf("%d\n",a);
+//         a++;
+//     }while(a<=5);
+// }
+
+
+// for(inti;con;in/de)
+
+#include<stdio.h>
+int main(){
+    for(int i=0;i<5;i++){
+        printf("%d",i);
+    }
+}
