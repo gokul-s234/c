@@ -1,0 +1,445 @@
+#include<stdio.h>
+int main(){
+    int a;
+    printf("\nenter the number a");
+    scanf("%d",&a);
+
+    if(a>0)
+    printf("%d is possitive",a);
+    else if(a<0)
+    printf("%d is negative",a);
+    else if(a==0)
+    printf("%d is zero",a);
+
+        return 0;
+}
+
+
+
+
+#include<stdio.h>
+int main(){
+
+    int num;
+    printf("enter a integer");
+    scanf("%d",&num);
+
+    if(num%2==0)
+         printf("%d is even",num);
+    else
+         printf("%d is odd",num);
+
+
+
+    return 0;
+}
+
+#include<stdio.h>
+int main(){
+
+    char c;
+    int lowercase_vowel,uppercase_vowel;
+    printf("enter a alphabet");
+    scanf("%c",&c);
+
+    lowercase_vowel=(c=='a' || c=='e' || c=='i' || c=='o' || c=='u');
+    uppercase_vowel=(c=='A' || c=='E' || c=='I' || c=='O' || c=='U');
+
+    if(lowercase_vowel || uppercase_vowel)
+        printf("%c is a vowel",c);
+    else
+        printf("%c is a consonant",c);
+
+
+     return 0;   
+
+
+}
+
+
+#include<stdio.h>
+int main(){
+    double n1,n2,n3;
+    printf("enter 3 numbers");
+    scanf("%f%f%f",&n1,&n2,&n3);
+
+    if(n1>=n2 && n1>=n3)
+    printf("%.2f is the largest number",n1);
+
+    if(n2>=n1 && n2>=n3)
+    printf("%.2f is the largest number",n2);
+
+    if(n3>=n1 && n3>=n2)
+    printf("%.2f is the largest nymber",n3);
+
+    return 0;
+    
+}
+
+
+#include<stdio.h>
+int main(){
+
+    int n,i,sum=0;
+    printf("enter a positive interger");
+    scanf("%d",&n);
+    for (i=1;i<=n;++i){
+        sum+=i;
+    }
+
+    printf("sum=%d",sum);
+    return 0;
+
+}
+
+
+#include<stdio.h>
+int main(){
+    char c;
+    for (c='A'; c<='Z';++c)
+    printf("%c",c);
+    return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    int year;
+    printf("enter a year");
+    scanf("%d",&year);
+
+if (year % 400==0){
+    printf("%d is a leap year",year);
+}
+else if(year % 100==0){
+    printf("%d is not a leap year",year);
+}
+else if(year % 4==0){
+    printf("%d is a leap year",year);
+}
+else{
+    printf("%d is not a leap year",year);
+}
+
+return 0;
+
+}
+
+
+#include<stdio.h>
+int main(){
+    int n,i;
+    unsigned long long fact=1;
+    printf("enter an integer");
+    scanf("%d",&n);
+    if(n<0)
+      printf("error! factorial of a negative number doesn't exist");
+    else{
+        for(i=1;i<=n;++i){
+            fact*=i;
+        }
+        printf("factorial of %d=%11u",n,fact);
+
+    }
+
+    return 0;
+
+}
+
+
+#include <stdio.h>
+
+int main() {
+
+  char op;
+  double first, second;
+  printf("Enter an operator (+, -, *, /): ");
+  scanf("%c", &op);
+  printf("Enter two operands: ");
+  scanf("%lf %lf", &first, &second);
+
+  switch (op) {
+    case '+':
+      printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
+      break;
+    case '-':
+      printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
+      break;
+    case '*':
+      printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
+      break;
+    case '/':
+      printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
+      break;
+    default:
+      printf("Error! operator is not correct");
+  }
+
+  return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    int n;
+    printf("enter an integer");
+    scanf("%d",&n);
+
+    for(int i=1;i<=10;++i){
+        printf("%d*%d=%d\n",n,i,n*i);
+    }
+    return 0;
+}
+
+#include <stdio.h>
+int main() {
+
+  int i, n;
+  int t1 = 0, t2 = 1;
+  int nextTerm = t1 + t2;
+  printf("Enter the number of terms: ");
+  scanf("%d", &n);
+  printf("Fibonacci Series: %d, %d, ", t1, t2);
+  for (i = 3; i <= n; ++i) {
+    printf("%d, ", nextTerm);
+    t1 = t2;
+    t2 = nextTerm;
+    nextTerm = t1 + t2;
+  }
+
+  return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    int n1,n2,max;
+    printf("enter two positive intergers");
+    scanf("%d%d",&n1,&n2);
+    max=(n1>n2)?n1:n2;
+    while(1){
+        if ((max % n1 == 0)&&(max % n2 == 0)){
+            printf("the LCM of %d and %d is %d",n1,n2,max);
+            break;
+        }
+        ++max;
+    }
+    return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    int num,originalNum,remainder,result=0;
+    printf("enter a three digit integer");
+    scanf("%d",&num);
+    originalNum=num;
+
+    while(originalNum!=0){
+        remainder=originalNum% 10;
+        result+=remainder*remainder*remainder;
+        originalNum/=10;
+
+    }
+    if(result==num)
+    printf("%d is an armstrong number",num);
+    else
+    printf("%d is not an armstrong number",num);
+    return 0;
+
+}
+
+
+#include<math.h>
+#include<stdio.h>
+int main(){
+    int i,sum,num,count=0;
+    printf("all armstrong number between 1 and 1000 are \n");
+    for(i=1;i<=1000;i++){
+        num=i;
+        while(num!=0){
+            num/=10;
+            count++;
+        }
+        num=i;
+         sum=pow(num %10,count)
+                  +pow((num%100-num%10)/10,count)
+                  +pow((num%1000-num%100)/100,count);
+        if(sum==i){
+            printf("%d",i);
+        } 
+        count=0;         
+
+    }
+}
+
+
+#include <math.h>
+#include <stdio.h>
+int main() {
+  int low, high, number, originalNumber, rem, count = 0;
+  double result = 0.0;
+  printf("Enter two numbers(intervals): ");
+  scanf("%d %d", &low, &high);
+  printf("Armstrong numbers between %d and %d are: ", low, high);
+
+  if (high < low) {
+    high += low;
+    low = high - low;
+    high -= low;
+  }
+   
+  for (number = low + 1; number < high; ++number) {
+    originalNumber = number;
+
+    while (originalNumber != 0) {
+      originalNumber /= 10;
+      ++count;
+    }
+
+    originalNumber = number;
+
+    while (originalNumber != 0) {
+      rem = originalNumber % 10;
+      result += pow(rem, count);
+      originalNumber /= 10;
+    }
+
+    if ((int)result == number) {
+      printf("%d ", number);
+    }
+
+    count = 0;
+    result = 0;
+  }
+
+  return 0;
+}
+
+
+#include<stdio.h>
+
+int main(){
+    int n,reverse=0,remainder;
+    printf("enter an integer");
+    scanf("%d",&n);
+    while(n !=0){
+        remainder=n%10;
+        reverse=reverse*10+remainder;
+        n /=10;
+        
+    }
+    printf("reversed number =%d",reverse);
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+  int n, reversed = 0, remainder, original;
+    printf("Enter an integer: ");
+    scanf("%d", &n);
+    original = n;
+
+    while (n != 0) {
+        remainder = n % 10;
+        reversed = reversed * 10 + remainder;
+        n /= 10;
+    }
+
+    if (original == reversed)
+        printf("%d is a palindrome.", original);
+    else
+        printf("%d is not a palindrome.", original);
+
+    return 0;
+}
+
+
+#include <stdio.h>
+int main() {
+
+  int n, i, flag = 0;
+  printf("Enter a positive integer: ");
+  scanf("%d", &n);
+
+  if (n == 0 || n == 1)
+    flag = 1;
+
+  for (i = 2; i <= n / 2; ++i) {
+    if (n % i == 0) {
+      flag = 1;
+      break;
+    }
+  }
+
+  if (flag == 0)
+    printf("%d is a prime number.", n);
+  else
+    printf("%d is not a prime number.", n);
+
+  return 0;
+}
+
+
+#include<stdio.h>
+int main(){
+    int a,b,i,j,flag;
+    printf("enter lower bound of the intervel");
+    scanf("%d",&a);
+    printf("enter upper bound of the intervel");
+    scanf("%d",&b);
+    printf("prime numbers between %d and %dare",a,b);
+    for(i=a;i<=b;i++)
+    {
+        if(i==1 || i==0)
+        continue;
+        flag=1;
+for(j=2;j<=i/2;++j)
+{
+    if(i%j==0)
+    {
+        flag=0;
+        break;
+    }
+}
+if(flag==1)
+printf("%d",i);
+
+    }
+    return 0;
+
+}
+
+
+#include<stdio.h>
+int main(){
+    int num,i;
+    printf("enter a positive integer");
+    scanf("%d",&num);
+    printf("factors of %d are",num);
+    for(i=1;i<=num;++i){
+        if(num % i==0){
+            printf("%d",i);
+
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
