@@ -1,31 +1,38 @@
 
-#include <stdio.h>
 
-int main() {
-
-  char op;
-  double first, second;
-  printf("Enter an operator (+, -, *, /): ");
-  scanf("%c", &op);
-  printf("Enter two operands: ");
-  scanf("%lf %lf", &first, &second);
-
-  switch (op) {
-    case '+':
-      printf("%.1lf + %.1lf = %.1lf", first, second, first + second);
-      break;
-    case '-':
-      printf("%.1lf - %.1lf = %.1lf", first, second, first - second);
-      break;
-    case '*':
-      printf("%.1lf * %.1lf = %.1lf", first, second, first * second);
-      break;
-    case '/':
-      printf("%.1lf / %.1lf = %.1lf", first, second, first / second);
-      break;
-    default:
-      printf("Error! operator is not correct");
-  }
-
-  return 0;
+#include <stdio.h>    
+     
+int main()    
+{    
+     
+    int arr[] = {5, 2, 8, 7, 1};     
+    int temp = 0;    
+        
+      
+    int length = sizeof(arr)/sizeof(arr[0]);    
+        
+  
+    printf("Elements of original array: \n");    
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr[i]);     
+    }      
+        
+      
+    for (int i = 0; i < length; i++) {     
+        for (int j = i+1; j < length; j++) {     
+           if(arr[i] > arr[j]) {    
+               temp = arr[i];    
+               arr[i] = arr[j];    
+               arr[j] = temp;    
+           }     
+        }     
+    }    
+        
+    printf("\n");    
+           
+    printf("Elements of array sorted in ascending order: \n");    
+    for (int i = 0; i < length; i++) {     
+        printf("%d ", arr[i]);    
+    }    
+    return 0;    
 }
